@@ -13,8 +13,15 @@ const AddForm = () => {
             lastName,
             phone
         }
+        if(!name.trim() || !lastName.trim() || !phone.trim()){
+            alert("заполните поля!")
+            return
+        }
         // console.log(newContact)
         addContact(newContact)
+        setName("")
+        setLastName("")
+        setPhone("")
     }
     return (
         <div>
